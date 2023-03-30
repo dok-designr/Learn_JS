@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+  // array of objects to hold work info
+  let works = [
+    {
+      title: 'Work 1',
+      img: 'image1.jpg'
+    },
+    {
+      title: 'Work 2',
+      img: 'image2.jpg'
+    },
+    {
+      title: 'Work 3',
+      img: 'image3.jpg'
+    },
+    {
+      title: 'Work 4',
+      img: 'image4.jpg'
+    },
+    {
+      title: 'Work 4',
+      img: 'image4.jpg'
+    },
+    {
+      title: 'Work 4',
+      img: 'image4.jpg'
+    },
+    {
+      title: 'Work 4',
+      img: 'image4.jpg'
+    },
+    {
+      title: 'Work 4',
+      img: 'image4.jpg'
+    },
+    {
+      title: 'Work 4',
+      img: 'image4.jpg'
+    },
+  ];
+
+  // create a container element
+  let container = document.createElement('div');
+  container.className = 'works-container';
+
+  // loop through the works array
+  works.forEach(work => {
+    // create a work element
+    let workElem = document.createElement('div');
+    workElem.className = 'work';
+
+    // create an image element
+    let imgElem = document.createElement('img');
+    imgElem.src = work.img;
+    imgElem.alt = work.title;
+
+    // create a title element
+    let titleElem = document.createElement('h2');
+    titleElem.innerText = work.title;
+
+    // append the image and title to the work element
+    workElem.appendChild(imgElem);
+    workElem.appendChild(titleElem);
+
+    // append the work element to the container
+    container.appendChild(workElem);
+  });
+
+  // append the container to the body
+  document.body.appendChild(container);
+</script>
+</body>
+</html>
