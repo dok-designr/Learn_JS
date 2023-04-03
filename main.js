@@ -2957,3 +2957,53 @@ wmapUser = null; // Override the Reference
 console.log(myWeakMap);
 
 
+// Array Method => Array.from(Iterable, MapFunc, This);
+
+console.log(Array.from("@dok_designr"));
+
+// 12345 is't Iterable, it's return empty Array 
+console.log(Array.from(12345));
+
+// "12345" is Iterable 
+console.log(Array.from("12345"));
+
+// Returns the value as a number and sum it to itself
+console.log(Array.from("12345", function (n) {
+    // +n to change string to number
+    return +n + +n;
+}));
+
+// other way, arrow funcriion
+console.log(Array.from("12345", (n) => +n + +n));
+
+
+console.log("#".repeat(20));
+
+// get the distinguished numbers Using Set() and Array.from()
+
+let myArrNumSet = [1, 1, 1, 2, 3, 4];
+
+let mySetNum = new Set(myArrNumSet);
+
+console.log(Array.from(mySetNum))
+
+
+console.log("#".repeat(20));
+
+// other way, future things
+
+console.log([...new Set(myArrNumSet)])
+
+// get all arguments by arguments word, crazy thing!!!
+function testArgs() {
+    return arguments;
+}
+
+console.log(testArgs("Amr", "salem", "omar"));
+
+// Function to change any arguments to Array, too crazy thing!!!
+function af() {
+    return Array.from(arguments);
+}
+
+console.log(testArgs("Amr", "salem", "omar", 1, 2, 3, true, false, ["g","a"]));
