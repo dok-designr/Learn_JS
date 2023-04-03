@@ -2927,6 +2927,33 @@ myMapMethod.clear();
 
 console.log(myMapMethod.size);
 
-// now this file uploade in my github
+// +++ now this file uploade in my github
 
-console.log("hello test 222")
+// Map VS WeakMap
+
+let mapUser = { theName3: "@dok_designr" };
+
+let myMap2 = new Map();
+
+myMap2.set(mapUser, "Object Value Map");
+
+mapUser = null; // Override the Reference
+
+console.log(myMap2);
+
+
+console.log("#".repeat(20));
+
+
+let wMapUser = { theName4: "@dok_designr" };
+
+let myWeakMap = new WeakMap();
+
+myWeakMap.set(wMapUser, "Object Value WeakMap");
+
+wmapUser = null; // Override the Reference
+
+
+console.log(myWeakMap);
+
+
